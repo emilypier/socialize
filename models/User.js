@@ -25,7 +25,7 @@ const UserSchema = new Schema(
       {
         // ref tells User model which documents to search to find the right friends.
         type: Schema.Types.ObjectId,
-        ref: 'Friend'
+        ref: 'User'
       }
     ]
   },
@@ -33,12 +33,16 @@ const UserSchema = new Schema(
     toJSON: {
       virtuals: true,
     },
-    // // prevents virtuals from creating duplicate of _id as `id`
-    // id: false
+    // prevents virtuals from creating duplicate of _id as `id`
+    id: false
   }
 );
 
-// get total count of comments and replies on retrieval
+// get total count of friends  on retrieval
 UserSchema.virtual('friendCount').get(function() {
-  return this.friends.reduce((total, friend) => total + friend.length + 1, 0);
+  return this.friends.length;
 });
+
+const User =  model('User', UserSchema);
+
+module.exports = User
