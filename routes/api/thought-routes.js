@@ -13,8 +13,7 @@ const {
 // POST /api/thoughts/
 router.route("/")
   .post(addThought)
-  .get(getAllThoughts)
-;
+  .get(getAllThoughts);
 
 // PUT /api/thoughts/<thoughtId>
 router
