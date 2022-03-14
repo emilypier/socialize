@@ -17,10 +17,10 @@
 Back-end code for a social networking app that allows Users to create, update and delete Thoughts. 
 
 ## Installation
-Clone this GitHub repository and run `npm install`.
+Clone this GitHub repository and run `npm install`. Run command `npm start` to run the server, and test the API routes in Insomnia.
 
 ## Usage
-Watch the walkthrough video [here](link).
+Watch the walkthrough video of the working API routes [here](https://drive.google.com/file/d/1oD6kaqxZUKJBu6ar3hRnspk6zaJijL0R/view?usp=sharing).
 
 ## License
 This application is covered under MIT license.
